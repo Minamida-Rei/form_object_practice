@@ -9,4 +9,6 @@ class User < ApplicationRecord
     validates :name_reading, format: {with: /\A[ァ-ヶー]+\z/, message: "is invalid. Input full-width katakana characters."}
     validates :nickname, format: {with: /\A[a-z0-9]+\z/i, message: "is invalid. Input half-width characters."}
   end
+
+  has_many :donations
 end
