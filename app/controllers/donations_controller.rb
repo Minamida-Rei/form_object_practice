@@ -5,12 +5,12 @@ class DonationsController < ApplicationController
   end
 
   def new
-    @donaiton_address = DonationAddress.new
+    @donation_address = DonationAddress.new
   end
 
   def create
     @donation_address = DonationAddress.new(donation_params)
-    if @donaiton_address.valid?
+    if @donation_address.valid?
        @donation_address.save
        redirect_to root_path
     else
